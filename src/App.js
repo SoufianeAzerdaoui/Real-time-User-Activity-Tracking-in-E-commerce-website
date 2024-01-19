@@ -1,13 +1,20 @@
+import CategoryBanner from './Categories/CategoryBanner.jsx';
 import Dashboard from './Dashboard.jsx'
+import Card from './Categories/Cards/Card.jsx';
+import { CategoryProvider } from './Categories/CategoryContext.js';
 
 
 function App() {
   return (
-    <div  className="">
-      <Dashboard />
-       <h1> Here most changes needed</h1>
+    <CategoryProvider>
 
-    </div>
+      <Dashboard />
+       
+       <CategoryBanner /> 
+
+       <Card />
+
+    </CategoryProvider>
   );
 }
 

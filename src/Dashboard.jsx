@@ -38,7 +38,7 @@ export default function NavbarDefault() {
           />
         </svg>
  
-        <a href="#" className="flex items-center">
+        <a href="#" className="flex items-center text-black">
           Pages
         </a>
       </Typography>
@@ -62,7 +62,7 @@ export default function NavbarDefault() {
             fill="#90A4AE"
           />
         </svg>
-        <a href="#" className="flex items-center">
+        <a href="#" className="flex items-center text-black">
           Account
         </a>
       </Typography>
@@ -84,7 +84,7 @@ export default function NavbarDefault() {
             fill="#90A4AE"
           />
         </svg>
-        <a href="#" className="flex items-center">
+        <a href="#" className="flex items-center text-black">
           Blocks
         </a>
       </Typography>
@@ -108,7 +108,7 @@ export default function NavbarDefault() {
             fill="#90A4AE"
           />
         </svg>
-        <a href="#" className="flex items-center">
+        <a href="#" className="flex items-center text-black">
           Docs
         </a>
       </Typography>
@@ -135,7 +135,7 @@ export default function NavbarDefault() {
             size="sm"
             className="hidden lg:inline-block"
           >
-            <span>Sign in</span>
+            <span className="text-black">  Sign in</span>
           </Button>
         </div>
         <IconButton
@@ -183,7 +183,7 @@ export default function NavbarDefault() {
             <Button fullWidth variant="text" size="sm" className="">
               <span>Log In</span>
             </Button>
-            <Button fullWidth variant="gradient" size="sm" className="">
+            <Button fullWidth variant="gradient" size="sm" className="text-black">
               <span>Sign in</span>
             </Button>
           </div>
