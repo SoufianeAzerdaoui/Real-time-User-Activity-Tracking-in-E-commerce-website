@@ -7,7 +7,7 @@ function App() {
   return (
     
     <CategoryProvider >
-
+{/* this changed */}
       <Header />
 
       <CategoryBanner />
