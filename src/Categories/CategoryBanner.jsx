@@ -10,11 +10,11 @@ const CategoryBanner = () => {
 
   return (
     <> 
-         <div id='categoryid' className="flex justify-center pt-[9rem]">
-    <p className='border-b-2 border-red-500 text-4xl pb-[1rem] font-extrabold'>
-      New Arrivals
-    </p>
-  </div> 
+      <div id='categoryid' className="flex justify-center pt-[9rem]">
+        <p className='border-b-2 border-red-500 text-4xl pb-[1rem] font-extrabold'>
+          New Arrivals
+        </p>
+      </div> 
 
       <div className="category flex justify-center ">
 

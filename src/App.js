@@ -5,6 +5,7 @@ import Header from './Header.jsx';
 
 function App() {
   return (
+    
     <CategoryProvider >
 
       <Header />
