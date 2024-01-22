@@ -1,0 +1,21 @@
+*{
+    
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+
+
+.product-card__btn-wishlist {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+  
+  .product-card__btn-wishlist:hover {
+    transform: scale(1.1);
+  }
+  
+  .wishlist-clicked svg {
+    fill: red; 
+  }
+  
