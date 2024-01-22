@@ -1,8 +1,10 @@
 import React from "react";
+import './Hero.css'
+
 
 const Hero = () => {
     return (
-        <div className="dark:bg-gray-900">
+        <div className="dark:bg-gray-900 hero-container">
             <div className="container mx-auto py-9 md:py-12 lg:py-24">
                 <div className="flex flex-col lg:flex-row justify-center items-strech mx-4">
                     <div className="lg:w-4/12 flex justify-center items-center">

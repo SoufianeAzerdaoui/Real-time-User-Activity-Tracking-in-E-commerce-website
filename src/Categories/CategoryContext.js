@@ -5,7 +5,7 @@ const CategoryContext = createContext();
 export const useCategory = () => {
   const context = useContext(CategoryContext);
   if (!context) {
-    throw new Error('useCategory must be used within a CategoryProvider');
+    throw new Error('Error ');
   }
   return context;
 };
