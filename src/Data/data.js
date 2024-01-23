@@ -208,7 +208,70 @@
       "name": "Creative Kids' Art Supplies",
       "price": 14.99,
       "image": "https://img.freepik.com/free-photo/full-shot-kids-posing-together_23-2149853383.jpg?w=740&t=st=1705701851~exp=1705702451~hmac=64f3e370a19241bd6042f5e080f6bd79cdbadb4b57227690a913ddf7586ab4b6"
-    }
+    },
+    {
+      "id": 31,
+      "category": "kids",
+      "name": "Creative Kids' Art Supplies",
+      "price": 14.99,
+      "image": "https://img.freepik.com/free-photo/full-shot-kids-posing-together_23-2149853383.jpg?w=740&t=st=1705701851~exp=1705702451~hmac=64f3e370a19241bd6042f5e080f6bd79cdbadb4b57227690a913ddf7586ab4b6"
+    },
+
+    {
+      "id": 32,
+      "category": "kids",
+      "name": "Creative Kids' Art Supplies",
+      "price": 14.99,
+      "image": "https://img.freepik.com/free-photo/full-shot-kids-posing-together_23-2149853383.jpg?w=740&t=st=1705701851~exp=1705702451~hmac=64f3e370a19241bd6042f5e080f6bd79cdbadb4b57227690a913ddf7586ab4b6"
+    },{
+      "id": 33,
+      "category": "kids",
+      "name": "Creative Kids' Art Supplies",
+      "price": 14.99,
+      "image": "https://img.freepik.com/free-photo/full-shot-kids-posing-together_23-2149853383.jpg?w=740&t=st=1705701851~exp=1705702451~hmac=64f3e370a19241bd6042f5e080f6bd79cdbadb4b57227690a913ddf7586ab4b6"
+    },{
+      "id": 34,
+      "category": "kids",
+      "name": "Creative Kids' Art Supplies",
+      "price": 14.99,
+      "image": "https://img.freepik.com/free-photo/full-shot-kids-posing-together_23-2149853383.jpg?w=740&t=st=1705701851~exp=1705702451~hmac=64f3e370a19241bd6042f5e080f6bd79cdbadb4b57227690a913ddf7586ab4b6"
+    },{
+      "id": 35,
+      "category": "kids",
+      "name": "Creative Kids' Art Supplies",
+      "price": 14.99,
+      "image": "https://img.freepik.com/free-photo/full-shot-kids-posing-together_23-2149853383.jpg?w=740&t=st=1705701851~exp=1705702451~hmac=64f3e370a19241bd6042f5e080f6bd79cdbadb4b57227690a913ddf7586ab4b6"
+    },{
+      "id": 36,
+      "category": "kids",
+      "name": "Creative Kids' Art Supplies",
+      "price": 14.99,
+      "image": "https://img.freepik.com/free-photo/full-shot-kids-posing-together_23-2149853383.jpg?w=740&t=st=1705701851~exp=1705702451~hmac=64f3e370a19241bd6042f5e080f6bd79cdbadb4b57227690a913ddf7586ab4b6"
+    },{
+      "id": 37,
+      "category": "kids",
+      "name": "Creative Kids' Art Supplies",
+      "price": 14.99,
+      "image": "https://img.freepik.com/free-photo/full-shot-kids-posing-together_23-2149853383.jpg?w=740&t=st=1705701851~exp=1705702451~hmac=64f3e370a19241bd6042f5e080f6bd79cdbadb4b57227690a913ddf7586ab4b6"
+    },{
+      "id": 38,
+      "category": "kids",
+      "name": "Creative Kids' Art Supplies",
+      "price": 14.99,
+      "image": "https://img.freepik.com/free-photo/full-shot-kids-posing-together_23-2149853383.jpg?w=740&t=st=1705701851~exp=1705702451~hmac=64f3e370a19241bd6042f5e080f6bd79cdbadb4b57227690a913ddf7586ab4b6"
+    },{
+      "id": 39,
+      "category": "kids",
+      "name": "Creative Kids' Art Supplies",
+      "price": 14.99,
+      "image": "https://img.freepik.com/free-photo/full-shot-kids-posing-together_23-2149853383.jpg?w=740&t=st=1705701851~exp=1705702451~hmac=64f3e370a19241bd6042f5e080f6bd79cdbadb4b57227690a913ddf7586ab4b6"
+    },{
+      "id": 40,
+      "category": "kids",
+      "name": "Creative Kids' Art Supplies",
+      "price": 14.99,
+      "image": "https://img.freepik.com/free-photo/full-shot-kids-posing-together_23-2149853383.jpg?w=740&t=st=1705701851~exp=1705702451~hmac=64f3e370a19241bd6042f5e080f6bd79cdbadb4b57227690a913ddf7586ab4b6"
+    },
   ]
   
 

@@ -1,10 +1,12 @@
 import React  from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
 
+
+
 const Header = () => {
 
-
   return (
+
     <div>
 
       <header className='shadow-md py-4 px-4 sm:px-10 bg-white font-sans min-h-[70px] fixed w-full top-0 z-50'>
@@ -15,7 +17,7 @@ const Header = () => {
 
                 Fash  
 
-              <mark class="px-2 text-white bg-red-600 rounded red:bg-blue-500">ion</mark> 
+              <mark className="px-2 text-white bg-red-600 rounded red:bg-blue-500">ion</mark> 
           
           </a>      
 
@@ -38,9 +40,9 @@ const Header = () => {
         </span>
         <button id="toggle" className='lg:hidden ml-7'>
           <svg className="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd"
+            <path fillRule="evenodd"
               d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clip-rule="evenodd"></path>
+              clipRule="evenodd"></path>
           </svg>
         </button>
       </div>
@@ -64,7 +66,7 @@ const Header = () => {
               smooth={true}
               duration={500}
               className='hover:text-[#ff0011] text-gray-600 font-bold block text-xl'>
-              About
+              Category
             </Link>
         </li>
         <li className='max-lg:border-b max-lg:py-2 px-3'><a href='/'
