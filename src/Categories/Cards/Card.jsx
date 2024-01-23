@@ -48,9 +48,9 @@ const Card = () => {
     </div>
     <div className='best-sellers pt-[5rem]'>
 
-<BestSellers />
+        <BestSellers />
 
-</div>
+    </div>
  </>
   )
 }
