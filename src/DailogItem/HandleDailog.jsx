@@ -24,7 +24,7 @@ export default function HandleDailog() {
       <Button variant="outlined" onClick={handleClickOpen}>
         Open alert dialog
       </Button>
-      <DailogItem open={open} hrt={hrt} setHeart={setHeart} setOpen={setOpen} info={info} />
+      {open && <DailogItem open={open} hrt={hrt} setHeart={setHeart} setOpen={setOpen} info={info} />}
     </React.Fragment>
   );
 }

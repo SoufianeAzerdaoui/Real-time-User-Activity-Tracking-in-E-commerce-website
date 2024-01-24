@@ -1,28 +1,54 @@
 import React, { useState } from 'react';
 import './BestSellers.css';
 import Data from '../../Data/data';
+import DailogItem from '../../DailogItem/DailogItem'
 
 const BestSellers = () => {
-  const [isWishlistClicked, setIsWishlistClicked] = useState({});
-
-  const [selectedProduct, setSelectedProduct] = useState(null);
-
-  const handleWishlistClick = (productId) => {
-    setIsWishlistClicked((prevWishlistState) => ({
-      ...prevWishlistState,
-      [productId]: !prevWishlistState[productId],
-    }));
-  };
-
   
-  const handleProductClick = (product) => {
-    setSelectedProduct(product);
-  };
+  const [open, setOpen] = useState(false);
+  const info_1 = {
+    title: "Fashion Titanium Steel Colorfast Thick Chain Cuban Chain Necklace-Silver BY ELITE WORLD",
+    category: "Men",
+    old_price: "49.99 Dhs",
+    new_price: "37.49 Dhs",
+    Disponible: "Disponible",
+    desc: "livraison à partir de 9.00 Dhs vers CASABLANCA - Anfa",
+  }
+  const [info, setInfo] = useState(info_1)
+  const l = {}
+  Data.map(el => {
+    l[el.id] = false
+  })
+  const [liked, setLike] = useState(l)
 
+  const changeHeart = (id) =>{
+    Data.map((product) =>{
+      if (product.id === id){
+        setLike(ex => {return {...ex, [id]: !ex[id]}})
+      }
+    })
+  }
+  
 
-  const handleCloseDetails = () => {
-    setSelectedProduct(null);
+  const handleClickOpen = (id) => {
+    Data.map((product) =>{
+      if (product.id === id){
+        setInfo((ex) =>{
+          return {...ex,
+            "id": product.id, 
+            "title" : product.name, "category": product.category, 
+            "new_price":`${product.price} Dh`,
+            "Disponible": product.Disponible,
+            "old_price": `${product.old_price} Dh`,
+            "desc": product.desc,
+            "image": product.image,
+          }
+        })
+      }
+    })
+    setOpen(true);
   };
+  
 
   return (
     <>
@@ -37,7 +63,7 @@ const BestSellers = () => {
           <div
             key={product.id}
             className="product-card m-4 p-4 border"
-            onClick={() => handleProductClick(product)}
+            onClick={() => handleClickOpen(product.id)}
           >
             <img
               className="product-card__image mb-2 max-w-full h-auto"
@@ -45,38 +71,12 @@ const BestSellers = () => {
               alt={product.name}
             />
             <p className="product-card__brand">{product.name}</p>
-            <p className="product-card__price">${product.price.toFixed(2)}</p>
-            <button
-              className={`product-card__btn-wishlist ${isWishlistClicked[product.id] ? 'wishlist-clicked' : ''}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                handleWishlistClick(product.id);
-              }}
-            >
-              {/* Wishlist button SVG */}
-            </button>
+            <p className="product-card__price">${product.price}</p>
+            
           </div>
         ))}
-
-        {
-          selectedProduct && (
-
-            <div className="modal" onClick={handleCloseDetails}>
-              <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-              <span className='modal-close' onClick={handleCloseDetails}>&times;</span>
-                
-                <img
-                  className="modal-product-image"
-                  src={selectedProduct.image}
-                  alt={selectedProduct.name}
-                />
-                <p>{selectedProduct.name}</p>
-                <p>${selectedProduct.price.toFixed(2)}</p>
-              </div>
-            </div>
-            
-          )
-        }
+    {open && <DailogItem open={open} setOpen={setOpen} info={info} changeHeart={changeHeart} liked={liked} />}
+        
       </div>
     </>
   );
