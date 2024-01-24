@@ -55,7 +55,7 @@ const Card = () => {
   
     return (
       <>
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center pl-[15rem] pr-[15rem] pt-[5rem] ">
+    <div id='cards' className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center pl-[15rem] pr-[15rem] pt-[5rem] ">
       {filteredData.map((product) => (
         <a
           key={product.id}
