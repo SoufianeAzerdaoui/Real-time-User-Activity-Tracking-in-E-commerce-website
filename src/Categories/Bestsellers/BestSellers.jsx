@@ -28,11 +28,44 @@ const BestSellers = () => {
       }
     })
   }
+
+  const sendClick = async (data) => {
+    try {
+      const response = await fetch('http://127.0.0.1:5000/api/send_click', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          // You may need to include additional headers, such as authorization tokens
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const result = await response.json();
+      console.log(result);
+      // Handle the result as needed
+    } catch (error) {
+      console.error('Error:', error);
+      // Handle the error as needed
+    }
+  };
   
 
   const handleClickOpen = (id) => {
     Data.map((product) =>{
       if (product.id === id){
+        // send data of the cards that clicked to the server
+        sendClick({"id": product.id, 
+        "title" : product.name, "category": product.category, 
+        "new_price":`${product.price} Dh`,
+        "Disponible": product.Disponible,
+        "old_price": `${product.old_price} Dh`,
+        "desc": product.desc,
+        "image": product.image,})
+        //update the state
         setInfo((ex) =>{
           return {...ex,
             "id": product.id, 

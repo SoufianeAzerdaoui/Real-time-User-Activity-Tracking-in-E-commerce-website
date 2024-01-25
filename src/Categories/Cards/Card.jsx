@@ -1,4 +1,4 @@
-import React ,{useState} from 'react';
+import React ,{useState, useEffect} from 'react';
 import './Card.css';
 import Data from '../../Data/data';
 import { useCategory } from '../CategoryContext';
@@ -15,7 +15,6 @@ const Card = () => {
     new_price: "37.49 Dhs",
     Disponible: "Disponible",
     desc: "livraison à partir de 9.00 Dhs vers CASABLANCA - Anfa",
-    like : false
   }
   const [info, setInfo] = useState(info_1)
   const l = {}
@@ -31,11 +30,44 @@ const Card = () => {
       }
     })
   }
+
+  const sendClick = async (data) => {
+    try {
+      const response = await fetch('http://127.0.0.1:5000/api/send_click', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          // You may need to include additional headers, such as authorization tokens
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const result = await response.json();
+      console.log(result);
+      // Handle the result as needed
+    } catch (error) {
+      console.error('Error:', error);
+      // Handle the error as needed
+    }
+  };
   
 
   const handleClickOpen = (id) => {
     Data.map((product) =>{
+      // send data to server
       if (product.id === id){
+        sendClick({"id": product.id, 
+        "title" : product.name, "category": product.category, 
+        "new_price":`${product.price} Dh`,
+        "Disponible": product.Disponible,
+        "old_price": `${product.old_price} Dh`,
+        "desc": product.desc,
+        "image": product.image,})
+      // update the state
         setInfo((ex) =>{
           return {...ex,
             "id": product.id, 
@@ -46,12 +78,13 @@ const Card = () => {
             "desc": product.desc,
             "image": product.image,
           }
-        })
+        }) 
       }
+      setOpen(true);
     })
     
-    setOpen(true);
   };
+  
   
     return (
       <>
